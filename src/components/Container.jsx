@@ -6,11 +6,11 @@ import FormTodo from "./FormTodo";
 import TaskList from "./TaskList";
 
 const Container = () => {
-  const [list, setList] = useState([]); // (B-1)
+  const [todos, setTodos] = useState([]); // (B-1)
 
   // (A-2)
   const handleAddItem = (addItem) => {
-    setList([...list, addItem]); // (B-2)
+    setTodos([...todos, addItem]); // (B-2)
   };
   return (
     <div>
@@ -19,7 +19,7 @@ const Container = () => {
       {/*(A-1)*/}
       <FormTodo handleAddItem={handleAddItem} />
       {/*(C)*/}
-      <TaskList list={list} setList={setList} />
+      <TaskList todos={todos} setTodos={setTodos} />
     </div>
   );
 };

@@ -7,7 +7,9 @@ function ItemToDo({ todo, index, remove }) {
     <div>
       <article className="todo-item">
         {todo.text}
-        <button onClick={removeItem}>Delete</button>
+        <button className="delete-button" onClick={removeItem}>
+          Delete
+        </button>
       </article>
     </div>
   );

@@ -22,12 +22,7 @@ function App() {
     console.log(newTodos);
     setTodos(newTodos);
   };
-  const removeTodo = (e) => {
-    console.log(e.target.getAttribute("id"));
-    var index = Number(
-      e.target.id
-    ); /* That will give us the index position.One that wew want to remove*/
-    console.log(index);
+  const removeToDo = (index) => {
     let temp = [...todos];
     temp.splice(index, 1);
     console.log(temp);
@@ -39,12 +34,7 @@ function App() {
       <TodoForm addTodo={addTodo} />
       <section>
         {todos.map((todo, i) => (
-          <div key={i} id={i}>
-            <article className="todo">
-              {todo.text}
-              <button onClick={removeTodo}>Delete</button>
-            </article>
-          </div>
+          <ItemToDo index={i} todo={todo} remove={removeToDo} />
         ))}
       </section>
     </>

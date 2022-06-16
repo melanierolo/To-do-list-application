@@ -21,8 +21,7 @@ function App() {
     <>
       {todos.map((todo, i) => (
         <div key={i}>
-          <article>{todo.text} </article>
-          <article>{todo.status} </article>
+          <article className="todo">{todo.text} </article>
         </div>
       ))}
     </>

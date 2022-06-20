@@ -37,7 +37,7 @@ function App() {
       </section>
       <section className="todos">
         {todos.map((todo, i) => (
-          <ItemToDo index={i} todo={todo} remove={removeToDo} />
+          <ItemToDo key={i} index={i} todo={todo} remove={removeToDo} />
         ))}
       </section>
     </>

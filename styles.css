@@ -14,8 +14,14 @@ body {
 }
 
 .title {
-  margin: 20px;
+  margin: 40px;
+  text-align: center;
 }
+
+.todos {
+  margin: 40px;
+}
+
 code {
   font-family: Arial;
 }

@@ -35,7 +35,7 @@ function App() {
         <h1>ToDo List</h1>
         <TodoForm addTodo={addTodo} />
       </section>
-      <section>
+      <section className="todos">
         {todos.map((todo, i) => (
           <ItemToDo index={i} todo={todo} remove={removeToDo} />
         ))}

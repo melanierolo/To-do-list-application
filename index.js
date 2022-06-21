@@ -29,9 +29,25 @@ function App() {
     console.log(temp);
     setTodos(temp);
   };
-
+  /*Edit */
   const editItemTodo = (index) => {
+    setEdit(index);
     console.log(index);
+    console.log("index number", edit);
+  };
+
+  const saveEditItem = (index, text) => {
+    console.log("todo-list", todos);
+    console.log("editSave-index", index);
+    console.log("editSave-text", text);
+    console.log("todos-index", todos[index].text);
+    /*update object's text property */
+    todos[index].text = text;
+    setEdit(false);
+  };
+
+  const cancelEditItem = () => {
+    setEdit(false);
   };
 
   return (
@@ -46,8 +62,11 @@ function App() {
             key={i}
             index={i}
             todo={todo}
+            edit={edit}
             remove={removeToDo}
             update={editItemTodo}
+            save={saveEditItem}
+            cancel={cancelEditItem}
           />
         ))}
       </section>

@@ -1,4 +1,5 @@
-function ItemToDo({ todo, index, remove, update }) {
+function ItemToDo({ edit, todo, index, remove, update, save, cancel }) {
+  const [inputValue, setInputValue] = React.useState("");
   const removeItem = () => {
     remove(index);
     console.log("clicked Delete");
@@ -9,16 +10,42 @@ function ItemToDo({ todo, index, remove, update }) {
     console.log("clicked Edit");
   };
 
+  const saveItem = () => {
+    save(index, inputValue);
+    console.log("itemTODO-input", inputValue);
+  };
+
+  const cancelSave = () => {
+    cancel();
+  };
   return (
     <div>
       <article className="todo-item">
-        <p className="todo-item-text">{todo.text}</p>
-        <button className="edit-button" onClick={editItem}>
-          Edit
-        </button>
-        <button className="delete-button" onClick={removeItem}>
-          Delete
-        </button>
+        {edit === index ? (
+          <>
+            <input
+              className="input"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+            ></input>
+            <button className="edit-button" onClick={cancelSave}>
+              Cancel
+            </button>
+            <button className="delete-button" onClick={saveItem}>
+              Save
+            </button>
+          </>
+        ) : (
+          <>
+            <p className="todo-item-text">{todo.text}</p>
+            <button className="edit-button" onClick={editItem}>
+              Edit
+            </button>
+            <button className="delete-button" onClick={removeItem}>
+              Delete
+            </button>
+          </>
+        )}
       </article>
     </div>
   );

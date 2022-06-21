@@ -1,4 +1,5 @@
 function App() {
+  const [edit, setEdit] = React.useState(false);
   const [todos, setTodos] = React.useState([
     {
       text: "learn react",
@@ -29,15 +30,25 @@ function App() {
     setTodos(temp);
   };
 
+  const editItemTodo = (index) => {
+    console.log(index);
+  };
+
   return (
     <>
       <section className="title">
-        <h1>ToDo List</h1>
+        <h1>To-Do List</h1>
         <TodoForm addTodo={addTodo} />
       </section>
       <section className="todos">
         {todos.map((todo, i) => (
-          <ItemToDo key={i} index={i} todo={todo} remove={removeToDo} />
+          <ItemToDo
+            key={i}
+            index={i}
+            todo={todo}
+            remove={removeToDo}
+            update={editItemTodo}
+          />
         ))}
       </section>
     </>

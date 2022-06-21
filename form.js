@@ -21,11 +21,12 @@ function TodoForm({ addTodo }) {
         value={
           value /* the value that we just defined within the state of the application*/
         }
-        placeholder="Add Todo or a task..." /*to give the user some indication as what to do in this field  */
+        placeholder="Press Enter to Submit or click on button..." /*to give the user some indication as what to do in this field  */
         onChange={
           (e) => setValue(e.target.value) /*It will give us the input */
         }
       />
+      <button className="input-button">Add</button>
     </form>
   );
 }

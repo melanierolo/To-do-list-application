@@ -7,7 +7,9 @@ function ItemToDo({ edit, todo, index, remove, update, save, cancel }) {
 
   const editItem = () => {
     update(index);
-    console.log("clicked Edit");
+    setInputValue(todo.text);
+    console.log("edit-item clicked Edit");
+    console.log("edit-item clicked Edit", inputValue);
   };
 
   const saveItem = () => {

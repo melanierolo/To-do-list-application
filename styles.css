@@ -16,6 +16,7 @@ body {
 .title {
   margin: 40px;
   text-align: center;
+  font-size: 26px;
 }
 
 .todos {
@@ -52,14 +53,40 @@ code {
 }
 
 .input {
-  width: 100%;
+  width: 87%;
   box-sizing: border-box;
   border: 0;
   border-radius: 4px;
-  box-shadow: none;
   padding: 1rem;
   height: 2.25em;
   font-size: 24px;
+}
+
+.input-button {
+  width: 11%;
+  margin: 0 0 0 2%;
+  height: 2.25em;
+  vertical-align: middle;
+  background-color: #0b0b0b;
+  color: whitesmoke;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.todo-item-text {
+  width: 80%;
+}
+
+.edit-button {
+  background-color: rgb(227, 227, 227);
+  border: 2px solid #0b0b0b;
+  color: #0b0b0b;
+  padding: 14px 20px;
+  margin: 8px 2%;
+  cursor: pointer;
+  width: 10%;
+  height: 100%;
+  opacity: 0.8;
 }
 
 .delete-button {
@@ -70,6 +97,7 @@ code {
   border: none;
   cursor: pointer;
   width: 10%;
+  height: 100%;
   opacity: 0.9;
 }
 
@@ -78,6 +106,22 @@ code {
   background-color: #ff1f0f;
 }
 
+.save-button {
+  background-color: #3d297e;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  height: 100%;
+  opacity: 0.9;
+}
+
+.save-button:hover {
+  opacity: 1;
+  background-color: #3d297e;
+}
 /*Container*/
 .container {
   width: 100%;

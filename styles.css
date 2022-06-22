@@ -106,6 +106,22 @@ code {
   background-color: #ff1f0f;
 }
 
+.save-button {
+  background-color: #3d297e;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  height: 100%;
+  opacity: 0.9;
+}
+
+.save-button:hover {
+  opacity: 1;
+  background-color: #3d297e;
+}
 /*Container*/
 .container {
   width: 100%;

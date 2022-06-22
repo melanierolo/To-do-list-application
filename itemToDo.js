@@ -31,7 +31,7 @@ function ItemToDo({ edit, todo, index, remove, update, save, cancel }) {
             <button className="edit-button" onClick={cancelSave}>
               Cancel
             </button>
-            <button className="delete-button" onClick={saveItem}>
+            <button className="save-button" onClick={saveItem}>
               Save
             </button>
           </>
